@@ -1,6 +1,6 @@
 # Smart-Door-Locking-System
 
- The Project Objective is to implement a smart door locking system. 
+ The Project Objective is to implement a smart door locking system based on 2 ATmega16 microcontrollers. 
  
  Project Scenarios:
  - At startup, the user is asked to enter a new passowrd twice. This password is then sent to MC2 to be saves in EEPROM using I2C driver.
