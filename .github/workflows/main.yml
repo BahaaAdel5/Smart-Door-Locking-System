@@ -1,0 +1,34 @@
+name: smartDoor Workflow
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      
+      - name: Build
+        run: mvn install
+
+      - name: Notify if build fails
+        if: failure()
+        run: echo "FAILURE IN BUILD"
+
+  Testing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v5
+        with:
+         fetch-depth: 0
+
+            
+
+      
+    
